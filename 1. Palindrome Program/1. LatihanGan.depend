@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1517061320 source:/home/luryel/Documents/Bucky CPP Tutorial/1. LatihanGan/main.cpp
+	<iostream>
+	<algorithm>
+
