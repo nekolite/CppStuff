@@ -34,6 +34,8 @@ void initData() {
 
 void addData(std::string n) {
 
+    bool isTrue = false;
+
     Queue* temp = new Queue;
     temp->plat = n;
     temp->next = nullptr;
@@ -48,9 +50,29 @@ void addData(std::string n) {
 
         } else {
 
-            tail->next = temp;
-            tail = tail->next;
-            size++;
+            Queue* current = head;
+
+            while (current != nullptr) {
+
+                if(current->plat == n) {
+
+                    isTrue = true;
+                    break;
+                }
+
+                current = current->next;
+            }
+
+            if(isTrue) {
+
+                std::cout << "\nError! Data Sama" << std::endl;
+
+            } else {
+
+                tail->next = temp;
+                tail = tail->next;
+                size++;
+            }
         }
 
     } else {
