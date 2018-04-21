@@ -94,6 +94,17 @@ int main() {
                     std::cout << "\nPlat yang dihapus : ";
                     std::cin >> plat;
 
+                    while (!std::cin) {
+
+                        std::cout << "\nInput hanya angka!" << std::endl;
+
+                        std::cin.clear();
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                        std::cout << "\nMasukkan Plat Nomor : ";
+                        std::cin >> plat;
+                    }
+
                     parkir->deletePlat(plat);
 
                     BACK3:
